@@ -92,7 +92,7 @@ adb install --bypass-low-target-sdk-block GoldenDict2.4.0.apk
 ## 🙏 特別感謝
 
 * 感謝開源佛學社群的奉獻。
-* 特別感謝 **Google Gemini** 於資料庫建立、四語優化、繁簡精準轉換及技術除錯過程中的全程技術支援與陪伴！
+* 特別感謝 **Google Gemini 大神** 於資料庫建立、四語優化、繁簡精準轉換及技術除錯過程中的全程技術支援與陪伴！
 
 問題反饋：bodhicittazen@gmail.com
 

@@ -25,10 +25,10 @@ adb install --bypass-low-target-sdk-block GoldenDict2.4.0.apk
 
 ---
 
-## 🛠️ Android 15 / GoldenDict 2.4.0 閃退與編譯問題排解教學
+## 🛠️ Android 15+ / GoldenDict 2.4.0 閃退與編譯問題排解教學
 
 > ⚠️ **核心痛點**：
-> 在 Android 15 系統上執行 GoldenDict 2.4.0 時，首次讀取本資料庫（由於體積較大）會引發記憶體溢位而導致**程式崩潰、閃退**。此時系統會卡在編譯階段，並在後台留下一個未完成的 `.tmp` 暫存檔。
+> 在 Android 15+ 系統上執行 GoldenDict 2.4.0 時，首次讀取本資料庫（由於體積較大）會引發記憶體溢位而導致**程式崩潰、閃退**。此時系統會卡在編譯階段，並在後台留下一個未完成的 `.tmp` 暫存檔。
 
 ### 💡 獨家解決方案：跨版本索引檔「偷天換日」大法
 
@@ -41,7 +41,7 @@ adb install --bypass-low-target-sdk-block GoldenDict2.4.0.apk
    * **方法 A（推薦）**：直接下載本專案隨附已編譯好的通用索引檔（檔名範例：`28dcdec7dc1d0254a2a7f20b81f2f5cf0113`）。
    * **方法 B**：在其他能正常讀取此字典的裝置（如 Android 14 手機/平板、或電腦端）完成首次編譯後取得。
 
-2. **尋找 Android 15 裝置上的暫存檔名**：
+2. **尋找 Android 15+ 裝置上的暫存檔名**：
    * 用傳輸線連接電腦或使用手機檔案管理器，進入 Android 15 裝置的：
      `內建儲存空間/GoldenDict/.config/index/`
    * 找到編譯失敗留下的 `.tmp` 暫存檔（例如：`f411070050635f684961e8b1848b5f2f6892.tmp`）。
@@ -52,11 +52,11 @@ adb install --bypass-low-target-sdk-block GoldenDict2.4.0.apk
    * *例如：將 `28dcdec7dc1d...` 改成 `f411070050635f684961e8b1848b5f2f6892`*。
 
 4. **覆蓋與替換**：
-   * 刪除 Android 15 裝置中原本那個失敗的 `.tmp` 暫存檔。
+   * 刪除 Android 15+ 裝置中原本那個失敗的 `.tmp` 暫存檔。
    * 將剛剛重新命名好的成功索引檔，放回 `.config/index/` 資料夾內。
 
 5. **完美開啟**：
-   * 重新開啟 Android 15 上的 GoldenDict 2.4.0。
+   * 重新開啟 Android 15+ 上的 GoldenDict 2.4.0。
    * 程式將直接偵測到相容的索引，**完美跳過編譯階段，直接進入查詢頁面**，所有功能均完全正常！
 
 ---

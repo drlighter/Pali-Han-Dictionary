@@ -42,7 +42,7 @@ adb install --bypass-low-target-sdk-block GoldenDict2.4.0.apk
    * **方法 B**：在其他能正常讀取此字典的裝置（如 Android 14 手機/平板、或電腦端）完成首次編譯後取得。
 
 2. **尋找 Android 15+ 裝置上的暫存檔名**：
-   * 用傳輸線連接電腦或使用手機檔案管理器，進入 Android 15 裝置的：
+   * 用傳輸線連接電腦或使用手機檔案管理器，進入 Android 15+ 裝置的：
      `內建儲存空間/GoldenDict/.config/index/`
    * 找到編譯失敗留下的 `.tmp` 暫存檔（例如：`f411070050635f684961e8b1848b5f2f6892.tmp`）。
    * **完整複製並記下這串英數相間的檔名**。
